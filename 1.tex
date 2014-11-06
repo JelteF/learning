@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+
+\title{Homework 2 Intensionele Logica's en Onzekerheden}
+\author{Jelte Fennema --- 10183159}
+\date{September 2014}
+
+\begin{document}
+
+\maketitle
+\begin{enumerate}
+    \item
+        \begin{enumerate}
+            \item
+                De input is het gebruikersprofiel van de klant en de output zijn
+                de aankopen die de klant doet.
+            \item
+                Geslacht, leeftijd, eerdere aankopen van de klant
+            \item
+                Supervised: Wie koopt er barbies? Uitkomst: Dat meisjes van
+                tussen de 6 en 12 vaak barbies kopen.
+
+                Unsupervised: Cluster mensen op aan de hand van eerdere
+                aankopen. Uitkomst: Mensen in een cluster willen ook de dingen
+                kopen die ze nog niet hebben die andere mensen in dat cluster
+                wel hebben.
+
+        \end{enumerate}
+
+    \item
+        \begin{enumerate}
+            \item $\theta_0 = 0$ and $\theta_1 = 1$
+
+                $MSE = \frac{1}{2 * 3}({(5 - 6)}^2 + {(5 - 6)}^2 + {(3 - 10)}^2) = 8.5$
+            \item
+                $\theta_0 = 0 - 0.1 * \frac{1}{3} * (-1 - 1 - 7) = 0.3$
+
+                $\theta_1 = 1 - 0.1 * \frac{1}{3} * (-1*5 - 1*5 - 7*3) = 2.03$
+
+                $MSE = \frac{1}{2 * 3}{(0.3 + 10.15 - 6)}^2 + {(0.3 + 10.15 - 6)}^2 + {(0.3 + 6.09 - 10)}^2 = 8.77$
+        \end{enumerate}
+
+    \item Yes, this is possible
+        $\theta_0 = \theta_0 - \alpha\frac{1}{m} \sum\limits_{i=1}^m(h_\theta(x_i) - y_i)$
+
+        $\theta_1 = \theta_1 - \alpha\frac{1}{m}
+        \sum\limits_{i=1}^m(h_\theta(x_i) - y_i) * x_i$
+
+        $\theta_2 = \theta_2 - \alpha\frac{1}{m}
+        \sum\limits_{i=1}^m(h_\theta(x_i) - y_i) * x_i^2$
+
+    \item
+        You would have to find where the derivative of the cost function is
+        zero.
+        $0 = \frac{1}{m} \sum\limits_{i=1}^m(\theta_0 + \theta_1*x_i + y_i) * x_i$
+
+        $0 = \sum\limits_{i=1}^m(\theta_0 + \theta_1*x_i + y_i) * x_i$
+
+        $0 = \sum\limits_{i=1}^m\theta_0*x_i + \theta_1*x_i^2 + y_i*x_i$
+
+        $0 = \sum\limits_{i=1}^m(\theta_0*x_i) +
+        \sum\limits_{i=1}^m(\theta_1*x_i^2) + \sum\limits_{i=1}^m(y_i*x_i)$
+
+        $-\sum\limits_{i=1}^m(\theta_1*x_i^2)  = \sum\limits_{i=1}^m(\theta_0*x_i) +
+        \sum\limits_{i=1}^m(y_i*x_i)$
+
+        ???
+\end{enumerate}
+
+
+\end{document}
